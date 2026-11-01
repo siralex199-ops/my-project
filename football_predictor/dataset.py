@@ -11,6 +11,9 @@ from pathlib import Path
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 
+# نتایج دستی که کاربر ثبت می‌کند؛ بعد از هر بازسازی دیتاست هم حفظ می‌شود
+MANUAL_RESULTS = DATA_DIR / "manual_results.csv"
+
 
 @dataclass(frozen=True)
 class Match:
@@ -61,8 +64,47 @@ def load_matches() -> tuple[Match, ...]:
                     away_goals=ag,
                 )
             )
+    matches = _apply_manual_results(matches)
     matches.sort(key=lambda m: (m.date, m.league))
     return tuple(matches)
+
+
+def _apply_manual_results(matches: list[Match]) -> list[Match]:
+    """اعمال نتایجی که به‌صورت دستی در data/manual_results.csv ثبت شده‌اند.
+
+    اگر بازی از قبل در دیتاست باشد، نتیجه‌اش جایگزین می‌شود؛ در غیر این صورت
+    به‌عنوان یک بازی جدید اضافه می‌شود.
+    """
+    if not MANUAL_RESULTS.exists():
+        return matches
+    index = {(m.league, m.home, m.away, m.date): i for i, m in enumerate(matches)}
+    with MANUAL_RESULTS.open(encoding="utf-8", newline="") as fh:
+        for row in csv.DictReader(fh):
+            if not row.get("league") or not row.get("home") or not row.get("away"):
+                continue
+            day = _parse_date(row["date"])
+            if day is None:
+                continue
+            hg = int(row["hg"]) if row.get("hg", "") != "" else None
+            ag = int(row["ag"]) if row.get("ag", "") != "" else None
+            if hg is None or ag is None:
+                continue
+            key = (row["league"], row["home"], row["away"], day)
+            entry = Match(
+                league=row["league"],
+                season=row.get("season") or "manual",
+                date=day,
+                home=row["home"],
+                away=row["away"],
+                home_goals=hg,
+                away_goals=ag,
+            )
+            if key in index:
+                matches[index[key]] = entry
+            else:
+                index[key] = len(matches)
+                matches.append(entry)
+    return matches
 
 
 @lru_cache(maxsize=1)
