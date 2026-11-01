@@ -90,6 +90,13 @@
    "en.1"
   ]
  },
+ "ascoli": {
+  "en": "Ascoli Picchio FC",
+  "fa": "آسکولی",
+  "leagues": [
+   "it.2"
+  ]
+ },
  "aston villa": {
   "en": "Aston Villa",
   "fa": "استون ویلا",
@@ -133,6 +140,13 @@
    "fr.1"
   ]
  },
+ "avellino": {
+  "en": "US Avellino",
+  "fa": "آولینو",
+  "leagues": [
+   "it.2"
+  ]
+ },
  "aves": {
   "en": "CD Aves",
   "fa": "آوس",
@@ -159,6 +173,13 @@
   "fa": "بارسلونا",
   "leagues": [
    "es.1"
+  ]
+ },
+ "bari": {
+  "en": "FC Bari 1908",
+  "fa": "باری",
+  "leagues": [
+   "it.2"
   ]
  },
  "barnsley": {
@@ -200,7 +221,8 @@
   "en": "Benevento Calcio",
   "fa": "بنونتو",
   "leagues": [
-   "it.1"
+   "it.1",
+   "it.2"
   ]
  },
  "benfica": {
@@ -249,10 +271,11 @@
   ]
  },
  "bologna": {
-  "en": "Bologna FC 1909",
+  "en": "Bologna FC",
   "fa": "بولونیا",
   "leagues": [
-   "it.1"
+   "it.1",
+   "it.2"
   ]
  },
  "bolton": {
@@ -311,7 +334,8 @@
   "en": "Brescia Calcio",
   "fa": "برشا",
   "leagues": [
-   "it.1"
+   "it.1",
+   "it.2"
   ]
  },
  "brest": {
@@ -362,7 +386,8 @@
   "en": "Cagliari Calcio",
   "fa": "کالیاری",
   "leagues": [
-   "it.1"
+   "it.1",
+   "it.2"
   ]
  },
  "cambuur": {
@@ -384,7 +409,15 @@
   "en": "Carpi FC",
   "fa": "کارپی",
   "leagues": [
-   "it.1"
+   "it.1",
+   "it.2"
+  ]
+ },
+ "carrarese": {
+  "en": "Carrarese Calcio",
+  "fa": "کارارزه",
+  "leagues": [
+   "it.2"
   ]
  },
  "casa pia": {
@@ -398,7 +431,15 @@
   "en": "Calcio Catania",
   "fa": "کاتانیا",
   "leagues": [
-   "it.1"
+   "it.1",
+   "it.2"
+  ]
+ },
+ "catanzaro": {
+  "en": "US Catanzaro",
+  "fa": "کاتانزارو",
+  "leagues": [
+   "it.2"
   ]
  },
  "celta": {
@@ -412,7 +453,8 @@
   "en": "AC Cesena",
   "fa": "چزنا",
   "leagues": [
-   "it.1"
+   "it.1",
+   "it.2"
   ]
  },
  "charlton": {
@@ -440,7 +482,15 @@
   "en": "Chievo Verona",
   "fa": "کیه‌وو",
   "leagues": [
-   "it.1"
+   "it.1",
+   "it.2"
+  ]
+ },
+ "cittadella": {
+  "en": "AS Cittadella",
+  "fa": "چیتادلا",
+  "leagues": [
+   "it.2"
   ]
  },
  "clermont": {
@@ -454,7 +504,8 @@
   "en": "Como 1907",
   "fa": "کومو",
   "leagues": [
-   "it.1"
+   "it.1",
+   "it.2"
   ]
  },
  "cordoba": {
@@ -462,6 +513,13 @@
   "fa": "کوردوبا",
   "leagues": [
    "es.1"
+  ]
+ },
+ "cosenza": {
+  "en": "Cosenza Calcio",
+  "fa": "کوزنتسا",
+  "leagues": [
+   "it.2"
   ]
  },
  "coventry city": {
@@ -476,14 +534,16 @@
   "en": "US Cremonese",
   "fa": "کرمونزه",
   "leagues": [
-   "it.1"
+   "it.1",
+   "it.2"
   ]
  },
  "crotone": {
   "en": "FC Crotone",
   "fa": "کروتونه",
   "leagues": [
-   "it.1"
+   "it.1",
+   "it.2"
   ]
  },
  "crystal palace": {
@@ -582,7 +642,8 @@
   "en": "Empoli FC",
   "fa": "امپولی",
   "leagues": [
-   "it.1"
+   "it.1",
+   "it.2"
   ]
  },
  "espanyol barcelona": {
@@ -662,6 +723,13 @@
    "it.1"
   ]
  },
+ "foggia": {
+  "en": "Foggia Calcio",
+  "fa": "فوجیا",
+  "leagues": [
+   "it.2"
+  ]
+ },
  "fortuna dusseldorf": {
   "en": "Fortuna Düsseldorf",
   "fa": "فورتونا دوسلدورف",
@@ -687,7 +755,8 @@
   "en": "Frosinone Calcio",
   "fa": "فروزینونه",
   "leagues": [
-   "it.1"
+   "it.1",
+   "it.2"
   ]
  },
  "fulham": {
@@ -869,6 +938,13 @@
    "en.2"
   ]
  },
+ "juve stabia": {
+  "en": "Juve Stabia",
+  "fa": "یووه استابیا",
+  "leagues": [
+   "it.2"
+  ]
+ },
  "juventus": {
   "en": "Juventus",
   "fa": "یوونتوس",
@@ -897,6 +973,13 @@
    "es.1"
   ]
  },
+ "latina": {
+  "en": "Latina Calcio",
+  "fa": "لاتینا",
+  "leagues": [
+   "it.2"
+  ]
+ },
  "lazio": {
   "en": "Lazio Roma",
   "fa": "لاتزیو",
@@ -922,7 +1005,8 @@
   "en": "US Lecce",
   "fa": "لچه",
   "leagues": [
-   "it.1"
+   "it.1",
+   "it.2"
   ]
  },
  "leeds": {
@@ -987,7 +1071,8 @@
   "en": "AS Livorno",
   "fa": "لیورنو",
   "leagues": [
-   "it.1"
+   "it.1",
+   "it.2"
   ]
  },
  "lorient": {
@@ -1047,6 +1132,13 @@
    "en.1"
   ]
  },
+ "mantova": {
+  "en": "Mantova 1911 SSD",
+  "fa": "مانتوا",
+  "leagues": [
+   "it.2"
+  ]
+ },
  "maritimo": {
   "en": "CS Marítimo",
   "fa": "ماریتیمو",
@@ -1097,6 +1189,13 @@
    "en.2"
   ]
  },
+ "modena": {
+  "en": "Modena FC",
+  "fa": "مودنا",
+  "leagues": [
+   "it.2"
+  ]
+ },
  "monaco": {
   "en": "AS Monaco",
   "fa": "موناکو",
@@ -1115,7 +1214,8 @@
   "en": "AC Monza",
   "fa": "مونتزا",
   "leagues": [
-   "it.1"
+   "it.1",
+   "it.2"
   ]
  },
  "moreirense": {
@@ -1204,6 +1304,13 @@
    "en.2"
   ]
  },
+ "novara": {
+  "en": "Novara Calcio",
+  "fa": "نووارا",
+  "leagues": [
+   "it.2"
+  ]
+ },
  "nurnberg": {
   "en": "1. FC Nürnberg",
   "fa": "نورنبرگ",
@@ -1239,11 +1346,19 @@
    "de.1"
   ]
  },
+ "padova": {
+  "en": "Calcio Padova",
+  "fa": "پادوا",
+  "leagues": [
+   "it.2"
+  ]
+ },
  "palermo": {
   "en": "US Palermo",
   "fa": "پالرمو",
   "leagues": [
-   "it.1"
+   "it.1",
+   "it.2"
   ]
  },
  "paris": {
@@ -1257,14 +1372,23 @@
   "en": "Parma Calcio 1913",
   "fa": "پارما",
   "leagues": [
-   "it.1"
+   "it.1",
+   "it.2"
+  ]
+ },
+ "perugia": {
+  "en": "AC Perugia Calcio",
+  "fa": "پروجا",
+  "leagues": [
+   "it.2"
   ]
  },
  "pescara": {
   "en": "Pescara",
   "fa": "پسکارا",
   "leagues": [
-   "it.1"
+   "it.1",
+   "it.2"
   ]
  },
  "peterborough": {
@@ -1275,10 +1399,11 @@
   ]
  },
  "pisa": {
-  "en": "AC Pisa 1909",
+  "en": "AC Pisa",
   "fa": "پیزا",
   "leagues": [
-   "it.1"
+   "it.1",
+   "it.2"
   ]
  },
  "plymouth": {
@@ -1286,6 +1411,13 @@
   "fa": "پلیموث",
   "leagues": [
    "en.2"
+  ]
+ },
+ "pordenone": {
+  "en": "Pordenone Calcio",
+  "fa": "پوردنونه",
+  "leagues": [
+   "it.2"
   ]
  },
  "portimonense": {
@@ -1314,6 +1446,13 @@
   "fa": "پرستون",
   "leagues": [
    "en.2"
+  ]
+ },
+ "pro vercelli": {
+  "en": "Pro Vercelli",
+  "fa": "پرو ورچلی",
+  "leagues": [
+   "it.2"
   ]
  },
  "psg": {
@@ -1409,6 +1548,20 @@
    "es.1"
   ]
  },
+ "reggiana": {
+  "en": "AC Reggiana 1919",
+  "fa": "رجیانا",
+  "leagues": [
+   "it.2"
+  ]
+ },
+ "reggina": {
+  "en": "Reggina Calcio",
+  "fa": "رجینا",
+  "leagues": [
+   "it.2"
+  ]
+ },
  "reims": {
   "en": "Stade de Reims",
   "fa": "رنس",
@@ -1462,14 +1615,16 @@
   "en": "US Salernitana 1919",
   "fa": "سالرنیتانا",
   "leagues": [
-   "it.1"
+   "it.1",
+   "it.2"
   ]
  },
  "sampdoria": {
   "en": "Sampdoria",
   "fa": "سامپدوریا",
   "leagues": [
-   "it.1"
+   "it.1",
+   "it.2"
   ]
  },
  "santa clara": {
@@ -1483,7 +1638,8 @@
   "en": "Sassuolo Calcio",
   "fa": "ساسولو",
   "leagues": [
-   "it.1"
+   "it.1",
+   "it.2"
   ]
  },
  "schalke": {
@@ -1522,6 +1678,13 @@
    "en.2"
   ]
  },
+ "siena": {
+  "en": "AC Siena",
+  "fa": "سینا",
+  "leagues": [
+   "it.2"
+  ]
+ },
  "southampton": {
   "en": "Southampton FC",
   "fa": "ساوتهمپتون",
@@ -1534,7 +1697,8 @@
   "en": "SPAL",
   "fa": "اسپال",
   "leagues": [
-   "it.1"
+   "it.1",
+   "it.2"
   ]
  },
  "sparta rotterdam": {
@@ -1548,7 +1712,8 @@
   "en": "Spezia Calcio",
   "fa": "اسپتزیا",
   "leagues": [
-   "it.1"
+   "it.1",
+   "it.2"
   ]
  },
  "sporting": {
@@ -1594,6 +1759,13 @@
    "de.1"
   ]
  },
+ "sudtirol": {
+  "en": "FC Südtirol",
+  "fa": "زودتیرول",
+  "leagues": [
+   "it.2"
+  ]
+ },
  "sunderland": {
   "en": "Sunderland AFC",
   "fa": "ساندرلند",
@@ -1615,6 +1787,13 @@
   "fa": "تلستار",
   "leagues": [
    "nl.1"
+  ]
+ },
+ "ternana": {
+  "en": "Ternana Calcio",
+  "fa": "ترنانا",
+  "leagues": [
+   "it.2"
   ]
  },
  "tondela": {
@@ -1643,6 +1822,13 @@
   "fa": "تولوز",
   "leagues": [
    "fr.1"
+  ]
+ },
+ "trapani": {
+  "en": "Trapani Calcio",
+  "fa": "تراپانی",
+  "leagues": [
+   "it.2"
   ]
  },
  "troyes": {
@@ -1687,18 +1873,34 @@
    "es.1"
   ]
  },
+ "varese": {
+  "en": "AS Varese 1910",
+  "fa": "وارزه",
+  "leagues": [
+   "it.2"
+  ]
+ },
  "venezia": {
   "en": "Venezia FC",
   "fa": "ونیز",
   "leagues": [
-   "it.1"
+   "it.1",
+   "it.2"
   ]
  },
  "verona": {
   "en": "Hellas Verona",
   "fa": "هلاس ورونا",
   "leagues": [
-   "it.1"
+   "it.1",
+   "it.2"
+  ]
+ },
+ "vicenza": {
+  "en": "Vicenza Calcio",
+  "fa": "ویچنزا",
+  "leagues": [
+   "it.2"
   ]
  },
  "villarreal": {
@@ -1706,6 +1908,20 @@
   "fa": "ویارئال",
   "leagues": [
    "es.1"
+  ]
+ },
+ "virtus entella": {
+  "en": "Virtus Entella",
+  "fa": "ویرتوس انتلا",
+  "leagues": [
+   "it.2"
+  ]
+ },
+ "virtus lanciano": {
+  "en": "Virtus Lanciano",
+  "fa": "ویرتوس لانچانو",
+  "leagues": [
+   "it.2"
   ]
  },
  "vitesse": {

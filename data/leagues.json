@@ -27,6 +27,13 @@
   "flag": "🇮🇹",
   "tier": 1
  },
+ "it.2": {
+  "name_en": "Serie B",
+  "name_fa": "سری بی ایتالیا",
+  "country": "Italy",
+  "flag": "🇮🇹",
+  "tier": 2
+ },
  "de.1": {
   "name_en": "Bundesliga",
   "name_fa": "بوندس‌لیگا آلمان",
