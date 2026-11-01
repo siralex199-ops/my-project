@@ -61,6 +61,26 @@ class Handler(BaseHTTPRequestHandler):
         sys.stderr.write("%s - %s\n" % (self.address_string(), fmt % args))
 
     # ---------------------------------------------------------------- API
+    def do_HEAD(self) -> None:  # noqa: N802
+        """پاسخ به درخواست‌های HEAD (بررسی سلامت توسط پراکسی‌ها)."""
+        path = urlparse(self.path).path
+        if path.startswith("/api/"):
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json; charset=utf-8")
+            self.end_headers()
+            return
+        rel = "index.html" if path in ("/", "") else path.lstrip("/")
+        target = (STATIC_DIR / rel).resolve()
+        if not str(target).startswith(str(STATIC_DIR.resolve())) or not target.is_file():
+            self.send_response(404)
+            self.end_headers()
+            return
+        ctype = mimetypes.guess_type(str(target))[0] or "application/octet-stream"
+        self.send_response(200)
+        self.send_header("Content-Type", ctype)
+        self.send_header("Content-Length", str(target.stat().st_size))
+        self.end_headers()
+
     def do_GET(self) -> None:  # noqa: N802
         parsed = urlparse(self.path)
         query = parse_qs(parsed.query)

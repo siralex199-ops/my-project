@@ -43,10 +43,6 @@ def _played(matches: list[Match]) -> list[Match]:
     return [m for m in matches if m.played]
 
 
-def _upcoming(matches: list[Match]) -> list[Match]:
-    return [m for m in matches if not m.played]
-
-
 class LeaguePredictor:
     """مدلِ آماده‌به‌استفاده برای یک لیگ."""
 
@@ -101,9 +97,31 @@ class LeaguePredictor:
         return self.model.predict(home, away)
 
     # ----------------------------------------------------------- fixtures
+    @property
+    def last_played_date(self) -> date | None:
+        played = [m for m in _played(self.matches) if m.date <= self.as_of]
+        return max((m.date for m in played), default=None)
+
+    def upcoming(self, season: str | None = None) -> list[Match]:
+        """بازی‌های بدون نتیجه در فصل جاری، از تاریخ آخرین نتیجه‌ی ثبت‌شده به بعد.
+
+        بازی‌های فصل‌های قدیم که هیچ‌وقت نتیجه‌شان ثبت نشده «پیش‌رو» نیستند و
+        همچنین بازی‌های ابتدای فصل که نتیجه‌شان در داده جا افتاده حذف می‌شوند.
+        """
+        season = season or self.season
+        cutoff = self.last_played_date
+        candidates = [
+            m
+            for m in self.matches
+            if not m.played and (season is None or m.season == season)
+        ]
+        if cutoff is not None:
+            candidates = [m for m in candidates if m.date >= cutoff]
+        return sorted(candidates, key=lambda m: (m.date, m.home))
+
     def fixtures(self, limit: int = 40, nights: int | None = None, fresh_only: bool = False) -> list[FixturePrediction]:
         """بازی‌های پیش‌رو (بدون نتیجه) به‌ترتیب تاریخ."""
-        upcoming = sorted(_upcoming(self.matches), key=lambda m: (m.date, m.home))
+        upcoming = self.upcoming()
         if fresh_only:
             upcoming = [m for m in upcoming if m.date >= self.as_of]
         if not upcoming:
@@ -296,7 +314,7 @@ class PredictorRegistry:
                     "flag": info.get("flag", "⚽"),
                     "season": season,
                     "teams": len({m.home for m in current} | {m.away for m in current}),
-                    "fixtures": len(_upcoming(matches)),
+                    "fixtures": len([m for m in current if not m.played and (not played or m.date >= played[-1].date)]),
                     "played": len(played),
                     "last_result": played[-1].date.isoformat() if played else None,
                 }
