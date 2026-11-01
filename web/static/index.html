@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>پیش‌بین فوتبال | پیش‌بینی بازی‌ها با مدل دیکسون-کولز</title>
+<meta name="description" content="پیش‌بینی احتمالاتی بازی‌های فوتبال اروپا با مدل آماری دیکسون-کولز: نتیجه، گل انتظاری، نتایج دقیق و شبیه‌سازی فصل." />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%BD%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+<div class="aurora" aria-hidden="true"></div>
+<div class="pitch-lines" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">⚽</div>
+    <div class="brand-text">
+      <h1>پیش‌بین فوتبال</h1>
+      <p>مدل آماری دیکسون-کولز · ۸ لیگ اروپا</p>
+    </div>
+  </div>
+  <div class="topbar-meta">
+    <div class="meta-chip" id="dataMeta">
+      <span class="dot"></span><span>در حال بارگذاری…</span>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs" role="tablist">
+  <button class="tab active" data-view="fixtures" role="tab">بازی‌های پیش‌رو</button>
+  <button class="tab" data-view="manual" role="tab">پیش‌بینی دستی</button>
+  <button class="tab" data-view="league" role="tab">جدول و قدرت</button>
+  <button class="tab" data-view="sim" role="tab">شبیه‌سازی فصل</button>
+  <button class="tab" data-view="about" role="tab">درباره مدل</button>
+</nav>
+
+<div class="chips" id="leagueChips" aria-label="انتخاب لیگ"></div>
+
+<main>
+  <!-- ─────────────── بازی‌های پیش‌رو ─────────────── -->
+  <section class="view active" id="view-fixtures">
+    <div class="section-head">
+      <div>
+        <h2>پیش‌بینی بازی‌های پیش‌رو</h2>
+        <p class="hint">روی هر کارت بزنید تا تحلیل کامل بازی (نتایج دقیق، بازار گل، ماتریس احتمال) باز شود.</p>
+      </div>
+      <div class="legend">
+        <span><i class="sw sw-home"></i>برد میزبان</span>
+        <span><i class="sw sw-draw"></i>مساوی</span>
+        <span><i class="sw sw-away"></i>برد میهمان</span>
+      </div>
+    </div>
+    <div id="fixturesGrid" class="cards-grid">
+      <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+    </div>
+  </section>
+
+  <!-- ─────────────── پیش‌بینی دستی ─────────────── -->
+  <section class="view" id="view-manual">
+    <div class="panel">
+      <h2>یک بازی را انتخاب کنید</h2>
+      <p class="hint">تیم میزبان و میهمان را از لیگ انتخابی بالا برگزینید.</p>
+      <div class="manual-form">
+        <label class="field">
+          <span>تیم میزبان</span>
+          <select id="homeSelect"></select>
+        </label>
+        <button class="swap" id="swapBtn" title="جابه‌جایی میزبان و میهمان">⇄</button>
+        <label class="field">
+          <span>تیم میهمان</span>
+          <select id="awaySelect"></select>
+        </label>
+        <button class="primary" id="predictBtn">پیش‌بینی کن</button>
+      </div>
+    </div>
+    <div id="manualResult"></div>
+  </section>
+
+  <!-- ─────────────── جدول و قدرت ─────────────── -->
+  <section class="view" id="view-league">
+    <div class="subswitch" id="leagueSwitch">
+      <button class="active" data-panel="table">جدول لیگ</button>
+      <button data-panel="power">قدرت مدل</button>
+    </div>
+    <div id="tablePanel" class="panel">
+      <div id="leagueTable" class="table-wrap"></div>
+    </div>
+    <div id="powerPanel" class="panel hidden">
+      <p class="hint">قدرت = قدرت حمله − ضعف دفاع (مقیاس لگاریتمی گل). هرچه بالاتر، تیم قوی‌تر.</p>
+      <div id="powerList"></div>
+    </div>
+  </section>
+
+  <!-- ─────────────── شبیه‌سازی فصل ─────────────── -->
+  <section class="view" id="view-sim">
+    <div class="section-head">
+      <div>
+        <h2>شبیه‌سازی ادامه فصل</h2>
+        <p class="hint">مونت‌کارلو با ۱۵۰۰ اجرای کامل از بازی‌های باقی‌مانده؛ بر پایه‌ی همین مدل.</p>
+      </div>
+      <button class="ghost" id="simRefresh">اجرای مجدد</button>
+    </div>
+    <div class="panel">
+      <div id="simTable" class="table-wrap"></div>
+    </div>
+  </section>
+
+  <!-- ─────────────── درباره مدل ─────────────── -->
+  <section class="view" id="view-about">
+    <div class="about-grid">
+      <div class="panel">
+        <h2>مدل چطور کار می‌کند؟</h2>
+        <p>
+          برای هر تیم دو پارامتر یاد گرفته می‌شود: <b>قدرت حمله</b> و <b>ضعف دفاع</b>. تعداد گل‌های هر تیم
+          توزیع پواسون دارد که میانگینش از ضرب این دو پارامتر و <b>مزیت میزبانی</b> به دست می‌آید:
+        </p>
+        <div class="formula">λ<sub>میزبان</sub> = exp(حمله<sub>میزبان</sub> + دفاع<sub>میهمان</sub> + مزیت میزبانی)</div>
+        <div class="formula">λ<sub>میهمان</sub> = exp(حمله<sub>میهمان</sub> + دفاع<sub>میزبان</sub>)</div>
+        <p>
+          سپس اصلاحیه‌ی دیکسون-کولز (τ) احتمال نتایج کم‌گل مثل ۰-۰ و ۱-۱ را تنظیم می‌کند، چون در واقعیت
+          این نتایج بیشتر از حالت مستقل دو پواسون رخ می‌دهند. نتایج قدیمی‌تر با <b>نیمه‌عمر ۳۶۵ روز</b>
+          وزن کمتری می‌گیرند تا فرم اخیر تیم‌ها مهم‌تر باشد.
+        </p>
+      </div>
+      <div class="panel">
+        <h2>کیفیت مدل (اعتبارسنجی)</h2>
+        <p class="hint">مدل روی داده‌های قبل از هر فصل آموزش دیده و روی همان فصل آزمایش شده است.</p>
+        <div id="backtestBox" class="stat-grid"></div>
+      </div>
+      <div class="panel">
+        <h2>داده‌ها</h2>
+        <ul class="facts" id="dataFacts"></ul>
+        <p class="hint">
+          داده‌ی تاریخی از مخزن متن‌باز <span class="mono">openfootball/football.json</span> گرفته شده است.
+          این برنامه یک ابزار آماری/آموزشی است و پیش‌بینی آن قطعی نیست؛ شرط‌بندی ریسک مالی دارد.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <span>ساخته‌شده با پایتون، بدون هیچ کتابخانه بیرونی · مدل دیکسون-کولز ۱۹۹۷</span>
+  <span id="footerStat"></span>
+</footer>
+
+<!-- ─────────────── مودال جزئیات ─────────────── -->
+<div class="modal hidden" id="modal" role="dialog" aria-modal="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-card" id="modalCard">
+    <button class="modal-close" data-close aria-label="بستن">×</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1842 @@
+{
+ "academico viseu": {
+  "en": "Académico de Viseu",
+  "fa": "آکادمیکو ویزئو",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "ado den haag": {
+  "en": "ADO Den Haag",
+  "fa": "دن هاخ",
+  "leagues": [
+   "nl.1"
+  ]
+ },
+ "ajaccio": {
+  "en": "AC Ajaccio",
+  "fa": "آژاکسیو",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "ajax": {
+  "en": "AFC Ajax",
+  "fa": "آژاکس",
+  "leagues": [
+   "nl.1"
+  ]
+ },
+ "alaves": {
+  "en": "Deportivo Alavés",
+  "fa": "آلاوس",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "almere city": {
+  "en": "Almere City FC",
+  "fa": "آلمیره سیتی",
+  "leagues": [
+   "nl.1"
+  ]
+ },
+ "almeria": {
+  "en": "UD Almería",
+  "fa": "آلمریا",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "alverca": {
+  "en": "FC Alverca",
+  "fa": "آلورکا",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "amiens": {
+  "en": "Amiens SC",
+  "fa": "آمین",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "angers sco": {
+  "en": "Angers SCO",
+  "fa": "آنژه",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "arminia bielefeld": {
+  "en": "Arminia Bielefeld",
+  "fa": "آرمینیا بیله‌فلد",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "arouca": {
+  "en": "FC Arouca",
+  "fa": "آروکا",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "arsenal": {
+  "en": "Arsenal FC",
+  "fa": "آرسنال",
+  "leagues": [
+   "en.1"
+  ]
+ },
+ "aston villa": {
+  "en": "Aston Villa",
+  "fa": "استون ویلا",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "atalanta": {
+  "en": "Atalanta",
+  "fa": "آتالانتا",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "athletic bilbao": {
+  "en": "Athletic Bilbao",
+  "fa": "اتلتیک بیلبائو",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "atletico madrid": {
+  "en": "Atlético Madrid",
+  "fa": "اتلتیکو مادرید",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "augsburg": {
+  "en": "FC Augsburg",
+  "fa": "آگسبورگ",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "auxerre": {
+  "en": "AJ Auxerre",
+  "fa": "اوسر",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "aves": {
+  "en": "CD Aves",
+  "fa": "آوس",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "avs": {
+  "en": "AVS",
+  "fa": "آوی‌اس",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "az": {
+  "en": "AZ Alkmaar",
+  "fa": "آزد آلکمار",
+  "leagues": [
+   "nl.1"
+  ]
+ },
+ "barcelona": {
+  "en": "FC Barcelona",
+  "fa": "بارسلونا",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "barnsley": {
+  "en": "Barnsley FC",
+  "fa": "بارنزلی",
+  "leagues": [
+   "en.2"
+  ]
+ },
+ "bastia": {
+  "en": "SC Bastia",
+  "fa": "باستیا",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "bayer leverkusen": {
+  "en": "Bayer Leverkusen",
+  "fa": "بایر لورکوزن",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "bayern munich": {
+  "en": "Bayern Munich",
+  "fa": "بایرن مونیخ",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "belenenses": {
+  "en": "Belenenses",
+  "fa": "بلننسس",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "benevento": {
+  "en": "Benevento Calcio",
+  "fa": "بنونتو",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "benfica": {
+  "en": "Benfica",
+  "fa": "بنفیکا",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "birmingham": {
+  "en": "Birmingham City",
+  "fa": "بیرمنگام سیتی",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "blackburn": {
+  "en": "Blackburn Rovers",
+  "fa": "بلکبرن",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "blackpool": {
+  "en": "Blackpool FC",
+  "fa": "بلکپول",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "boavista": {
+  "en": "Boavista",
+  "fa": "بوآویستا",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "bochum": {
+  "en": "VfL Bochum 1848",
+  "fa": "بوخوم",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "bologna": {
+  "en": "Bologna FC 1909",
+  "fa": "بولونیا",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "bolton": {
+  "en": "Bolton Wanderers",
+  "fa": "بولتون",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "bordeaux": {
+  "en": "Girondins Bordeaux",
+  "fa": "بوردو",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "borussia dortmund": {
+  "en": "Borussia Dortmund",
+  "fa": "بوروسیا دورتموند",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "borussia monchengladbach": {
+  "en": "Bor. Mönchengladbach",
+  "fa": "مونشن‌گلادباخ",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "bournemouth": {
+  "en": "AFC Bournemouth",
+  "fa": "بورنموث",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "braga": {
+  "en": "SC Braga",
+  "fa": "براگا",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "brentford": {
+  "en": "Brentford FC",
+  "fa": "برنتفورد",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "brescia": {
+  "en": "Brescia Calcio",
+  "fa": "برشا",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "brest": {
+  "en": "Stade Brestois",
+  "fa": "برست",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "brighton": {
+  "en": "Brighton & Hove Albion",
+  "fa": "برایتون",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "bristol city": {
+  "en": "Bristol City FC",
+  "fa": "بریستول سیتی",
+  "leagues": [
+   "en.2"
+  ]
+ },
+ "burnley": {
+  "en": "Burnley FC",
+  "fa": "برنلی",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "cadiz": {
+  "en": "Cádiz CF",
+  "fa": "کادیس",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "caen": {
+  "en": "SM Caen",
+  "fa": "کان",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "cagliari": {
+  "en": "Cagliari Calcio",
+  "fa": "کالیاری",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "cambuur": {
+  "en": "SC Cambuur",
+  "fa": "کامبور",
+  "leagues": [
+   "nl.1"
+  ]
+ },
+ "cardiff": {
+  "en": "Cardiff City",
+  "fa": "کاردیف سیتی",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "carpi": {
+  "en": "Carpi FC",
+  "fa": "کارپی",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "casa pia": {
+  "en": "Casa Pia",
+  "fa": "کازا پیا",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "catania": {
+  "en": "Calcio Catania",
+  "fa": "کاتانیا",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "celta": {
+  "en": "Celta Vigo",
+  "fa": "سلتاویگو",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "cesena": {
+  "en": "AC Cesena",
+  "fa": "چزنا",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "charlton": {
+  "en": "Charlton Athletic",
+  "fa": "چارلتون",
+  "leagues": [
+   "en.2"
+  ]
+ },
+ "chaves": {
+  "en": "GD Chaves",
+  "fa": "شاوش",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "chelsea": {
+  "en": "Chelsea FC",
+  "fa": "چلسی",
+  "leagues": [
+   "en.1"
+  ]
+ },
+ "chievo": {
+  "en": "Chievo Verona",
+  "fa": "کیه‌وو",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "clermont": {
+  "en": "Clermont Foot 63",
+  "fa": "کلرمون",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "como": {
+  "en": "Como 1907",
+  "fa": "کومو",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "cordoba": {
+  "en": "Córdoba CF",
+  "fa": "کوردوبا",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "coventry city": {
+  "en": "Coventry City FC",
+  "fa": "کاونتری سیتی",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "cremonese": {
+  "en": "US Cremonese",
+  "fa": "کرمونزه",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "crotone": {
+  "en": "FC Crotone",
+  "fa": "کروتونه",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "crystal palace": {
+  "en": "Crystal Palace",
+  "fa": "کریستال پالاس",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "darmstadt": {
+  "en": "SV Darmstadt 98",
+  "fa": "دارمشتات",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "de graafschap": {
+  "en": "De Graafschap",
+  "fa": "خرافشاپ",
+  "leagues": [
+   "nl.1"
+  ]
+ },
+ "deportivo la coruna": {
+  "en": "Deportivo La Coruña",
+  "fa": "دپورتیوو لاکرونیا",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "derby": {
+  "en": "Derby County",
+  "fa": "دربی کانتی",
+  "leagues": [
+   "en.2"
+  ]
+ },
+ "dijon": {
+  "en": "Dijon FCO",
+  "fa": "دیژون",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "doncaster": {
+  "en": "Doncaster Rovers",
+  "fa": "دانکستر",
+  "leagues": [
+   "en.2"
+  ]
+ },
+ "eibar": {
+  "en": "SD Eibar",
+  "fa": "ایبار",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "eintracht braunschweig": {
+  "en": "Eintracht Braunschweig",
+  "fa": "اینتراخت برانشوایگ",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "eintracht frankfurt": {
+  "en": "Eintracht Frankfurt",
+  "fa": "اینتراخت فرانکفورت",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "elche": {
+  "en": "Elche CF",
+  "fa": "الچه",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "elversberg": {
+  "en": "SV 07 Elversberg",
+  "fa": "الورسبرگ",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "emmen": {
+  "en": "FC Emmen",
+  "fa": "امن",
+  "leagues": [
+   "nl.1"
+  ]
+ },
+ "empoli": {
+  "en": "Empoli FC",
+  "fa": "امپولی",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "espanyol barcelona": {
+  "en": "Espanyol",
+  "fa": "اسپانیول",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "estoril": {
+  "en": "GD Estoril Praia",
+  "fa": "استوریل",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "estrela amadora": {
+  "en": "Estrela da Amadora",
+  "fa": "استرلا آمادورا",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "everton": {
+  "en": "Everton FC",
+  "fa": "اورتون",
+  "leagues": [
+   "en.1"
+  ]
+ },
+ "evian thonon gaillard": {
+  "en": "Évian Thonon Gaillard",
+  "fa": "اویان",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "excelsior": {
+  "en": "SBV Excelsior",
+  "fa": "اکسلسیور",
+  "leagues": [
+   "nl.1"
+  ]
+ },
+ "famalicao": {
+  "en": "FC Famalicão",
+  "fa": "فامالیکائو",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "farense": {
+  "en": "SC Farense",
+  "fa": "فارنزه",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "feirense": {
+  "en": "CD Feirense",
+  "fa": "فیرنسه",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "feyenoord": {
+  "en": "Feyenoord",
+  "fa": "فاینورد",
+  "leagues": [
+   "nl.1"
+  ]
+ },
+ "fiorentina": {
+  "en": "ACF Fiorentina",
+  "fa": "فیورنتینا",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "fortuna dusseldorf": {
+  "en": "Fortuna Düsseldorf",
+  "fa": "فورتونا دوسلدورف",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "fortuna sittard": {
+  "en": "Fortuna Sittard",
+  "fa": "فورتونا سیتارد",
+  "leagues": [
+   "nl.1"
+  ]
+ },
+ "freiburg": {
+  "en": "SC Freiburg",
+  "fa": "فرایبورگ",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "frosinone": {
+  "en": "Frosinone Calcio",
+  "fa": "فروزینونه",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "fulham": {
+  "en": "Fulham FC",
+  "fa": "فولام",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "gazelec ajaccio": {
+  "en": "Gazélec FC Ajaccio",
+  "fa": "گازلک آژاکسیو",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "genoa": {
+  "en": "Genoa CFC",
+  "fa": "جنوا",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "getafe": {
+  "en": "Getafe CF",
+  "fa": "ختافه",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "gil vicente": {
+  "en": "Gil Vicente",
+  "fa": "ژیل ویسنته",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "girona": {
+  "en": "Girona FC",
+  "fa": "خیرونا",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "go ahead eagles": {
+  "en": "Go Ahead Eagles",
+  "fa": "خو اهد ایگلز",
+  "leagues": [
+   "nl.1"
+  ]
+ },
+ "granada": {
+  "en": "Granada CF",
+  "fa": "گرانادا",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "greuther furth": {
+  "en": "Greuther Fürth",
+  "fa": "گررویتر فورت",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "groningen": {
+  "en": "FC Groningen",
+  "fa": "خرونینگن",
+  "leagues": [
+   "nl.1"
+  ]
+ },
+ "guingamp": {
+  "en": "EA Guingamp",
+  "fa": "گنگان",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "hamburg": {
+  "en": "Hamburger SV",
+  "fa": "هامبورگ",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "hannover": {
+  "en": "Hannover 96",
+  "fa": "هانوفر",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "heerenveen": {
+  "en": "sc Heerenveen",
+  "fa": "هیرنفین",
+  "leagues": [
+   "nl.1"
+  ]
+ },
+ "heidenheim": {
+  "en": "1. FC Heidenheim 1846",
+  "fa": "هایدنهایم",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "heracles almelo": {
+  "en": "Heracles Almelo",
+  "fa": "هراکلس آلملو",
+  "leagues": [
+   "nl.1"
+  ]
+ },
+ "hertha berlin": {
+  "en": "Hertha BSC",
+  "fa": "هرتا برلین",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "hoffenheim": {
+  "en": "1899 Hoffenheim",
+  "fa": "هوفنهایم",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "holstein kiel": {
+  "en": "Holstein Kiel",
+  "fa": "هولشتاین کیل",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "huddersfield": {
+  "en": "Huddersfield Town",
+  "fa": "هادرزفیلد",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "huesca": {
+  "en": "SD Huesca",
+  "fa": "هوئسکا",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "hull": {
+  "en": "Hull City",
+  "fa": "هال سیتی",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "ingolstadt": {
+  "en": "FC Ingolstadt 04",
+  "fa": "اینگولشتات",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "inter": {
+  "en": "Inter Milan",
+  "fa": "اینتر میلان",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "ipswich town": {
+  "en": "Ipswich Town",
+  "fa": "ایپسویچ تاون",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "juventus": {
+  "en": "Juventus",
+  "fa": "یوونتوس",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "kaiserslautern": {
+  "en": "1. FC Kaiserslautern",
+  "fa": "کایزرسلاوترن",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "koln": {
+  "en": "FC Köln",
+  "fa": "کلن",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "las palmas": {
+  "en": "UD Las Palmas",
+  "fa": "لاس پالماس",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "lazio": {
+  "en": "Lazio Roma",
+  "fa": "لاتزیو",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "le havre": {
+  "en": "Le Havre AC",
+  "fa": "لو آور",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "le mans": {
+  "en": "Le Mans FC",
+  "fa": "لومان",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "lecce": {
+  "en": "US Lecce",
+  "fa": "لچه",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "leeds": {
+  "en": "Leeds United",
+  "fa": "لیدز یونایتد",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "leganes": {
+  "en": "CD Leganés",
+  "fa": "لگانس",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "leicester": {
+  "en": "Leicester City",
+  "fa": "لسترسیتی",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "lens": {
+  "en": "RC Lens",
+  "fa": "لانس",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "levante": {
+  "en": "Levante UD",
+  "fa": "لوانته",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "lille": {
+  "en": "Lille OSC",
+  "fa": "لیل",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "lincoln": {
+  "en": "Lincoln City FC",
+  "fa": "لینکلن سیتی",
+  "leagues": [
+   "en.2"
+  ]
+ },
+ "liverpool": {
+  "en": "Liverpool FC",
+  "fa": "لیورپول",
+  "leagues": [
+   "en.1"
+  ]
+ },
+ "livorno": {
+  "en": "AS Livorno",
+  "fa": "لیورنو",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "lorient": {
+  "en": "FC Lorient",
+  "fa": "لوریان",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "luton town": {
+  "en": "Luton Town FC",
+  "fa": "لوتون تاون",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "lyon": {
+  "en": "Olympique Lyonnais",
+  "fa": "لیون",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "mainz": {
+  "en": "1. FSV Mainz 05",
+  "fa": "ماینتس",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "malaga": {
+  "en": "Málaga CF",
+  "fa": "مالاگا",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "mallorca": {
+  "en": "RCD Mallorca",
+  "fa": "مایورکا",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "manchester city": {
+  "en": "Manchester City",
+  "fa": "منچستر سیتی",
+  "leagues": [
+   "en.1"
+  ]
+ },
+ "manchester united": {
+  "en": "Manchester United",
+  "fa": "منچستر یونایتد",
+  "leagues": [
+   "en.1"
+  ]
+ },
+ "maritimo": {
+  "en": "CS Marítimo",
+  "fa": "ماریتیمو",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "marseille": {
+  "en": "Olympique Marseille",
+  "fa": "مارسی",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "metz": {
+  "en": "FC Metz",
+  "fa": "متز",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "middlesbrough": {
+  "en": "Middlesbrough FC",
+  "fa": "میدلزبورو",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "milan": {
+  "en": "AC Milan",
+  "fa": "آ.ث. میلان",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "millwall": {
+  "en": "Millwall FC",
+  "fa": "میلوال",
+  "leagues": [
+   "en.2"
+  ]
+ },
+ "mk dons": {
+  "en": "MK Dons",
+  "fa": "میلتون کینز دونز",
+  "leagues": [
+   "en.2"
+  ]
+ },
+ "monaco": {
+  "en": "AS Monaco",
+  "fa": "موناکو",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "montpellier": {
+  "en": "Montpellier HSC",
+  "fa": "مونپلیه",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "monza": {
+  "en": "AC Monza",
+  "fa": "مونتزا",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "moreirense": {
+  "en": "Moreirense FC",
+  "fa": "موریرنسه",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "nac breda": {
+  "en": "NAC Breda",
+  "fa": "ناک بردا",
+  "leagues": [
+   "nl.1"
+  ]
+ },
+ "nacional": {
+  "en": "CD Nacional",
+  "fa": "ناسیونال",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "nancy": {
+  "en": "AS Nancy Lorraine",
+  "fa": "نانسی",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "nantes": {
+  "en": "FC Nantes",
+  "fa": "نانت",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "napoli": {
+  "en": "SSC Napoli",
+  "fa": "ناپولی",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "nec": {
+  "en": "NEC Nijmegen",
+  "fa": "نایمخن",
+  "leagues": [
+   "nl.1"
+  ]
+ },
+ "newcastle": {
+  "en": "Newcastle United",
+  "fa": "نیوکاسل",
+  "leagues": [
+   "en.1"
+  ]
+ },
+ "nice": {
+  "en": "OGC Nice",
+  "fa": "نیس",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "nimes": {
+  "en": "Nîmes Olympique",
+  "fa": "نیم",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "norwich city": {
+  "en": "Norwich City",
+  "fa": "نوریچ سیتی",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "nottingham forest": {
+  "en": "Nottingham Forest",
+  "fa": "ناتینگهام فارست",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "nurnberg": {
+  "en": "1. FC Nürnberg",
+  "fa": "نورنبرگ",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "osasuna": {
+  "en": "CA Osasuna",
+  "fa": "اوساسونا",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "oxford": {
+  "en": "Oxford United FC",
+  "fa": "آکسفورد یونایتد",
+  "leagues": [
+   "en.2"
+  ]
+ },
+ "pacos ferreira": {
+  "en": "Paços de Ferreira",
+  "fa": "پاکوش فریرا",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "paderborn": {
+  "en": "SC Paderborn 07",
+  "fa": "پادربورن",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "palermo": {
+  "en": "US Palermo",
+  "fa": "پالرمو",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "paris": {
+  "en": "Paris FC",
+  "fa": "پاری اف‌سی",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "parma": {
+  "en": "Parma Calcio 1913",
+  "fa": "پارما",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "pescara": {
+  "en": "Pescara",
+  "fa": "پسکارا",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "peterborough": {
+  "en": "Peterborough United",
+  "fa": "پیتربورو",
+  "leagues": [
+   "en.2"
+  ]
+ },
+ "pisa": {
+  "en": "AC Pisa 1909",
+  "fa": "پیزا",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "plymouth": {
+  "en": "Plymouth Argyle FC",
+  "fa": "پلیموث",
+  "leagues": [
+   "en.2"
+  ]
+ },
+ "portimonense": {
+  "en": "Portimonense SC",
+  "fa": "پورتیموننزه",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "porto": {
+  "en": "FC Porto",
+  "fa": "پورتو",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "portsmouth": {
+  "en": "Portsmouth FC",
+  "fa": "پورتسموث",
+  "leagues": [
+   "en.2"
+  ]
+ },
+ "preston": {
+  "en": "Preston North End FC",
+  "fa": "پرستون",
+  "leagues": [
+   "en.2"
+  ]
+ },
+ "psg": {
+  "en": "Paris Saint-Germain",
+  "fa": "پاری سن‌ژرمن",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "psv": {
+  "en": "PSV Eindhoven",
+  "fa": "پی‌اس‌وی آیندهوون",
+  "leagues": [
+   "nl.1"
+  ]
+ },
+ "qpr": {
+  "en": "Queens Park Rangers",
+  "fa": "کویینز پارک رنجرز",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "racing santander": {
+  "en": "Racing Santander",
+  "fa": "راسینگ سانتاندر",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "rayo vallecano": {
+  "en": "Rayo Vallecano de Madrid",
+  "fa": "رایو وایکانو",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "rb leipzig": {
+  "en": "RB Leipzig",
+  "fa": "لایپزیش",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "reading": {
+  "en": "Reading FC",
+  "fa": "ردینگ",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "real betis": {
+  "en": "Real Betis",
+  "fa": "رئال بتیس",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "real madrid": {
+  "en": "Real Madrid",
+  "fa": "رئال مادرید",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "real oviedo": {
+  "en": "Real Oviedo",
+  "fa": "رئال اوویدو",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "real sociedad": {
+  "en": "Real Sociedad",
+  "fa": "رئال سوسیداد",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "real valladolid": {
+  "en": "Real Valladolid",
+  "fa": "رئال وایادولید",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "real zaragoza": {
+  "en": "Real Zaragoza",
+  "fa": "رئال ساراگوسا",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "reims": {
+  "en": "Stade de Reims",
+  "fa": "رنس",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "rennes": {
+  "en": "Stade Rennais",
+  "fa": "رن",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "rio ave": {
+  "en": "Rio Ave",
+  "fa": "ریو آوه",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "rkc waalwijk": {
+  "en": "RKC Waalwijk",
+  "fa": "آر‌کی‌سی والفایک",
+  "leagues": [
+   "nl.1"
+  ]
+ },
+ "roma": {
+  "en": "AS Roma",
+  "fa": "آ.اس. رم",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "rotherham": {
+  "en": "Rotherham United",
+  "fa": "روترهام",
+  "leagues": [
+   "en.2"
+  ]
+ },
+ "saint etienne": {
+  "en": "Saint-Étienne",
+  "fa": "سنت‌اتین",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "salernitana": {
+  "en": "US Salernitana 1919",
+  "fa": "سالرنیتانا",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "sampdoria": {
+  "en": "Sampdoria",
+  "fa": "سامپدوریا",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "santa clara": {
+  "en": "Santa Clara",
+  "fa": "سانتا کلارا",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "sassuolo": {
+  "en": "Sassuolo Calcio",
+  "fa": "ساسولو",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "schalke": {
+  "en": "FC Schalke 04",
+  "fa": "شالکه",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "scunthorpe": {
+  "en": "Scunthorpe United",
+  "fa": "اسکانثورپ",
+  "leagues": [
+   "en.2"
+  ]
+ },
+ "sevilla": {
+  "en": "Sevilla FC",
+  "fa": "سویا",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "sheffield united": {
+  "en": "Sheffield United FC",
+  "fa": "شفیلد یونایتد",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "sheffield wednesday": {
+  "en": "Sheffield Wednesday",
+  "fa": "شفیلد ونزدی",
+  "leagues": [
+   "en.2"
+  ]
+ },
+ "southampton": {
+  "en": "Southampton FC",
+  "fa": "ساوتهمپتون",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "spal": {
+  "en": "SPAL",
+  "fa": "اسپال",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "sparta rotterdam": {
+  "en": "Sparta Rotterdam",
+  "fa": "اسپارتا روتردام",
+  "leagues": [
+   "nl.1"
+  ]
+ },
+ "spezia": {
+  "en": "Spezia Calcio",
+  "fa": "اسپتزیا",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "sporting": {
+  "en": "Sporting CP",
+  "fa": "اسپورتینگ",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "sporting gijon": {
+  "en": "Sporting Gijón",
+  "fa": "اسپورتینگ خیخون",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "st pauli": {
+  "en": "St. Pauli",
+  "fa": "سنت‌پائولی",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "stoke": {
+  "en": "Stoke City",
+  "fa": "استوک سیتی",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "strasbourg": {
+  "en": "RC Strasbourg",
+  "fa": "استراسبورگ",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "stuttgart": {
+  "en": "VfB Stuttgart",
+  "fa": "اشتوتگارت",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "sunderland": {
+  "en": "Sunderland AFC",
+  "fa": "ساندرلند",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "swansea": {
+  "en": "Swansea City",
+  "fa": "سوانزی",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "telstar": {
+  "en": "Telstar",
+  "fa": "تلستار",
+  "leagues": [
+   "nl.1"
+  ]
+ },
+ "tondela": {
+  "en": "CD Tondela",
+  "fa": "توندلا",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "torino": {
+  "en": "Torino FC",
+  "fa": "تورینو",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "tottenham": {
+  "en": "Tottenham Hotspur",
+  "fa": "تاتنهام",
+  "leagues": [
+   "en.1"
+  ]
+ },
+ "toulouse": {
+  "en": "Toulouse FC",
+  "fa": "تولوز",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "troyes": {
+  "en": "ESTAC Troyes",
+  "fa": "تروا",
+  "leagues": [
+   "fr.1"
+  ]
+ },
+ "twente": {
+  "en": "FC Twente",
+  "fa": "توئنته",
+  "leagues": [
+   "nl.1"
+  ]
+ },
+ "udinese": {
+  "en": "Udinese Calcio",
+  "fa": "اودینزه",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "union berlin": {
+  "en": "1. FC Union Berlin",
+  "fa": "اونیون برلین",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "utrecht": {
+  "en": "FC Utrecht",
+  "fa": "اوترخت",
+  "leagues": [
+   "nl.1"
+  ]
+ },
+ "valencia": {
+  "en": "Valencia CF",
+  "fa": "والنسیا",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "venezia": {
+  "en": "Venezia FC",
+  "fa": "ونیز",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "verona": {
+  "en": "Hellas Verona",
+  "fa": "هلاس ورونا",
+  "leagues": [
+   "it.1"
+  ]
+ },
+ "villarreal": {
+  "en": "Villarreal CF",
+  "fa": "ویارئال",
+  "leagues": [
+   "es.1"
+  ]
+ },
+ "vitesse": {
+  "en": "Vitesse",
+  "fa": "ویتسه",
+  "leagues": [
+   "nl.1"
+  ]
+ },
+ "vitoria guimaraes": {
+  "en": "Vitória Guimarães",
+  "fa": "ویتوریا گیمارش",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "vitoria setubal": {
+  "en": "Vitória Setúbal",
+  "fa": "ویتوریا ستوبال",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "vizela": {
+  "en": "FC Vizela",
+  "fa": "ویزلا",
+  "leagues": [
+   "pt.1"
+  ]
+ },
+ "volendam": {
+  "en": "FC Volendam",
+  "fa": "فولندام",
+  "leagues": [
+   "nl.1"
+  ]
+ },
+ "vvv venlo": {
+  "en": "VVV-Venlo",
+  "fa": "فنلو",
+  "leagues": [
+   "nl.1"
+  ]
+ },
+ "watford": {
+  "en": "Watford FC",
+  "fa": "واتفورد",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "werder bremen": {
+  "en": "Werder Bremen",
+  "fa": "وردر برمن",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "west brom": {
+  "en": "West Bromwich Albion",
+  "fa": "وست برومویچ",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "west ham": {
+  "en": "West Ham United",
+  "fa": "وستهام",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "wigan": {
+  "en": "Wigan Athletic",
+  "fa": "ویگان",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "willem ii": {
+  "en": "Willem II",
+  "fa": "ویلم دوم",
+  "leagues": [
+   "nl.1"
+  ]
+ },
+ "wolfsburg": {
+  "en": "VfL Wolfsburg",
+  "fa": "وولفسبورگ",
+  "leagues": [
+   "de.1"
+  ]
+ },
+ "wolves": {
+  "en": "Wolverhampton",
+  "fa": "ولورهمپتون",
+  "leagues": [
+   "en.1",
+   "en.2"
+  ]
+ },
+ "wrexham": {
+  "en": "Wrexham AFC",
+  "fa": "رکسام",
+  "leagues": [
+   "en.2"
+  ]
+ },
+ "wycombe": {
+  "en": "Wycombe Wanderers FC",
+  "fa": "وایکام",
+  "leagues": [
+   "en.2"
+  ]
+ },
+ "yeovil": {
+  "en": "Yeovil Town",
+  "fa": "یویل",
+  "leagues": [
+   "en.2"
+  ]
+ },
+ "zwolle": {
+  "en": "PEC Zwolle",
+  "fa": "زووله",
+  "leagues": [
+   "nl.1"
+  ]
+ }
+}

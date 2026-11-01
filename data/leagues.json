@@ -1,0 +1,58 @@
+{
+ "en.1": {
+  "name_en": "Premier League",
+  "name_fa": "لیگ برتر انگلیس",
+  "country": "England",
+  "flag": "🇬🇧",
+  "tier": 1
+ },
+ "en.2": {
+  "name_en": "Championship",
+  "name_fa": "چمپیونشیپ انگلیس",
+  "country": "England",
+  "flag": "🇬🇧",
+  "tier": 2
+ },
+ "es.1": {
+  "name_en": "LaLiga",
+  "name_fa": "لالیگا اسپانیا",
+  "country": "Spain",
+  "flag": "🇪🇸",
+  "tier": 1
+ },
+ "it.1": {
+  "name_en": "Serie A",
+  "name_fa": "سری آ ایتالیا",
+  "country": "Italy",
+  "flag": "🇮🇹",
+  "tier": 1
+ },
+ "de.1": {
+  "name_en": "Bundesliga",
+  "name_fa": "بوندس‌لیگا آلمان",
+  "country": "Germany",
+  "flag": "🇩🇪",
+  "tier": 1
+ },
+ "fr.1": {
+  "name_en": "Ligue 1",
+  "name_fa": "لیگ ۱ فرانسه",
+  "country": "France",
+  "flag": "🇫🇷",
+  "tier": 1
+ },
+ "nl.1": {
+  "name_en": "Eredivisie",
+  "name_fa": "ارِدیویزی هلند",
+  "country": "Netherlands",
+  "flag": "🇳🇱",
+  "tier": 1
+ },
+ "pt.1": {
+  "name_en": "Primeira Liga",
+  "name_fa": "لیگ برتر پرتغال",
+  "country": "Portugal",
+  "flag": "🇵🇹",
+  "tier": 1
+ }
+}
