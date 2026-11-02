@@ -180,12 +180,16 @@ def main() -> int:
         return 1
 
     teams = load_teams()
-    rows, unknown = [], []
+    rows, unknown, dupes = [], [], {}
     for rec in records:
         key = resolve(rec["name"], args.league, teams, manual)
         if not key:
             unknown.append(rec["name"])
             continue
+        if key in dupes:
+            dupes[key].append(rec["name"])
+            continue
+        dupes[key] = [rec["name"]]
         rows.append(
             {
                 "team": key,
@@ -199,6 +203,13 @@ def main() -> int:
                 "points": rec["points"],
             }
         )
+
+    clashes = {k: v for k, v in dupes.items() if len(v) > 1}
+    if clashes:
+        print("دو ردیف به یک تیم نگاشت شدند (نام تیم را با --map مشخص کنید):", file=sys.stderr)
+        for key, names in clashes.items():
+            print(f"  {key} ← {' , '.join(names)}", file=sys.stderr)
+        return 1
 
     rows.sort(key=lambda r: (-r["points"], -((r["gf"] or 0) - (r["ga"] or 0)), -(r["gf"] or 0)))
     for i, row in enumerate(rows, 1):

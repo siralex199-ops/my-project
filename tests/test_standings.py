@@ -85,3 +85,35 @@ class TestOfficialStandings(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
+
+
+class DuplicateMappingTests(unittest.TestCase):
+    def test_two_names_mapping_to_one_team_is_rejected(self):
+        import subprocess
+        import tempfile
+        from pathlib import Path
+
+        root = Path(__file__).resolve().parents[1]
+        text = (
+            "| # | تیم | بازی | برد | مساوی | باخت | گل -/+ | تفاضل | امتیاز |\n"
+            "| --- | --- | --- | --- | --- | --- | --- | --- | --- |\n"
+            "| 1 | مونزا | 9 | 2 | 1 | 6 | 15-20 | -5 | 7 |\n"
+            "| 2 | ونتزیا | 9 | 1 | 0 | 8 | 5-18 | -13 | 3 |\n"
+        )
+        with tempfile.NamedTemporaryFile("w", suffix=".md", encoding="utf-8", delete=False) as fh:
+            fh.write(text)
+            path = fh.name
+        proc = subprocess.run(
+            [
+                "python3",
+                str(root / "scripts" / "import_standings.py"),
+                "--league", "it.1",
+                "--file", path,
+                "--date", "2026-11-01",
+                "--expected", "2",
+            ],
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(proc.returncode, 1, proc.stdout + proc.stderr)
+        self.assertIn("monza", proc.stderr)
