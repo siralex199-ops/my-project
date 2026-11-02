@@ -708,3 +708,14 @@ td.team-cell { font-weight: 600; white-space: nowrap; }
   background: rgba(0, 224, 138, 0.08);
   color: #7bf0c0;
 }
+
+/* لیگ‌هایی که فقط جدول رسمی دارند (خارج از دیتاست مدل) */
+.chip.official-only {
+  border-style: dashed;
+}
+
+.panel.notice {
+  color: var(--muted);
+  line-height: 2;
+  font-size: 0.95rem;
+}

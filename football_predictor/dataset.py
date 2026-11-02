@@ -130,6 +130,31 @@ def load_official_standings() -> dict:
     return payload.get("leagues", {})
 
 
+def official_leagues() -> list[dict]:
+    """لیگ‌هایی که جدول رسمی دارند (شامل لیگ‌هایی که در دیتاست مدل نیستند)."""
+    official = load_official_standings() or {}
+    model = load_leagues()
+    out = []
+    for key, block in official.items():
+        info = model.get(key, {})
+        title = block.get("title") or info.get("name_fa") or key
+        out.append(
+            {
+                "id": key,
+                "name_fa": info.get("name_fa") or title,
+                "name_en": info.get("name_en") or title,
+                "country": info.get("country", ""),
+                "flag": info.get("flag", "⚽"),
+                "season": "",
+                "teams": len(block.get("rows") or []),
+                "official_only": key not in model,
+                "official_updated_at": block.get("updated_at", ""),
+                "official_source": block.get("source", ""),
+            }
+        )
+    return out
+
+
 @lru_cache(maxsize=1)
 def load_leagues() -> dict[str, dict]:
     path = DATA_DIR / "leagues.json"

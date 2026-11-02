@@ -167,10 +167,24 @@ function selectLeague(id) {
   if (state.view === "sim") loadSimulation();
 }
 
+function isOfficialOnly() {
+  return !!currentLeague().official_only;
+}
+
+function currentLeague() {
+  return state.leagues.find((l) => l.id === state.league) || {};
+}
+
+function officialOnlyNotice(what) {
+  return `<div class="panel notice">این لیگ جدول رسمی ورزش۳ را دارد، اما نتایج بازی‌هایش در دیتاست مدل نیست؛
+    بنابراین ${what} برای آن محاسبه نمی‌شود. جدول رسمی در تب «لیگ» هست.</div>`;
+}
+
 function renderChips() {
   document.getElementById("leagueChips").innerHTML = state.leagues
     .map(
-      (l) => `<button class="chip ${l.id === state.league ? "active" : ""}" data-league="${l.id}">
+      (l) => `<button class="chip ${l.id === state.league ? "active" : ""}${l.official_only ? " official-only" : ""}"
+        data-league="${l.id}" title="${l.official_only ? "فقط جدول رسمی (بدون مدل)" : ""}">
         <span>${l.flag}</span><span>${escapeHtml(l.name_fa)}</span>
       </button>`
     )
@@ -190,6 +204,10 @@ function renderMeta() {
 
 async function loadFixtures() {
   const grid = document.getElementById("fixturesGrid");
+  if (isOfficialOnly()) {
+    grid.innerHTML = officialOnlyNotice("بازی‌های پیش‌رو و پیش‌بینی");
+    return;
+  }
   grid.innerHTML = `<div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>`;
   try {
     const data = await api("/api/fixtures", { league: state.league, limit: 24 });
@@ -389,9 +407,10 @@ async function loadLeague() {
   tableEl.innerHTML = `<div class="skeleton" style="height:300px"></div>`;
   powerEl.innerHTML = `<div class="skeleton" style="height:300px"></div>`;
   try {
+    const officialOnly = isOfficialOnly();
     const [table, power] = await Promise.all([
       api("/api/table", { league: state.league }),
-      api("/api/power", { league: state.league }),
+      officialOnly ? Promise.resolve({ power: [] }) : api("/api/power", { league: state.league }),
     ]);
     state.tableData = table;
     state.tableSource = table.default_source || "model";
@@ -401,8 +420,13 @@ async function loadLeague() {
     document.querySelector('#tableSource button[data-src="official"]').style.display = table.official
       ? ""
       : "none";
+    document.querySelector('#tableSource button[data-src="model"]').style.display = table.model
+      ? ""
+      : "none";
     renderTable();
-    powerEl.innerHTML = powerHtml(power.power);
+    powerEl.innerHTML = power.power && power.power.length
+      ? powerHtml(power.power)
+      : `<div class="panel notice">جدول قدرت برای این لیگ محاسبه نمی‌شود (نتایجش در دیتاست مدل نیست).</div>`;
   } catch (err) {
     tableEl.innerHTML = errorBox(err.message);
   }

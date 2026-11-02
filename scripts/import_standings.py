@@ -57,7 +57,8 @@ def parse_rows(text: str) -> list[list[str]]:
             continue
         if all(set(c) <= set("-: ") for c in cells):
             continue
-        if any("تیم" in c for c in cells) or "بازی" in cells:
+        # سرصفحه‌ی جدول را رد کن (تطبیق دقیق سلول، نه زیررشته: «ماریتیمو» شامل «تیم» است)
+        if any(c in {"#", "تیم", "بازی", "امتیاز", "تیم‌ها"} for c in cells):
             continue
         rows.append(cells)
     return rows
@@ -159,10 +160,20 @@ def main() -> int:
     ap.add_argument("--url", default="")
     ap.add_argument("--map", action="append", default=[], help="نگاشت دستی: \"نام سایت=کلید\"")
     ap.add_argument("--expected", type=int, default=None, help="تعداد تیم‌های مورد انتظار")
+    ap.add_argument("--title", default="", help="نام فارسی لیگ (برای لیگ‌های خارج از دیتاست مدل)")
+    ap.add_argument(
+        "--allow-unknown",
+        action="store_true",
+        help="تیم‌هایی که در دیتاست نیستند با کلید ساختگی ثبت شوند (برای لیگ‌های خارج از دیتاست)",
+    )
     args = ap.parse_args()
 
-    if args.league not in load_leagues():
-        print(f"لیگ ناشناخته: {args.league}", file=sys.stderr)
+    model_leagues = load_leagues()
+    if args.league not in model_leagues and not args.title:
+        print(
+            f"لیگ {args.league} در دیتاست مدل نیست؛ برای افزودن جدول رسمی، --title بدهید.",
+            file=sys.stderr,
+        )
         return 1
 
     manual = {}
@@ -182,10 +193,19 @@ def main() -> int:
     teams = load_teams()
     rows, unknown, dupes = [], [], {}
     for rec in records:
-        key = resolve(rec["name"], args.league, teams, manual)
+        # برای لیگ‌های خارج از دیتاست، فقط نگاشت دستی؛ وگرنه کلید ساختگی
+        key = (
+            resolve(rec["name"], args.league, teams, manual)
+            if args.league in model_leagues
+            else manual.get(norm(rec["name"]))
+        )
         if not key:
-            unknown.append(rec["name"])
-            continue
+            if args.allow_unknown:
+                key = "x:" + norm(rec["name"])
+                teams.setdefault(key, {"fa": rec["name"]})
+            else:
+                unknown.append(rec["name"])
+                continue
         if key in dupes:
             dupes[key].append(rec["name"])
             continue
@@ -224,6 +244,8 @@ def main() -> int:
         "source": args.source,
         "source_url": args.url,
         "updated_at": args.date,
+        "title": args.title or payload["leagues"].get(args.league, {}).get("title", ""),
+        "in_model": args.league in model_leagues,
         "rows": rows,
     }
     payload["source"] = args.source

@@ -79,8 +79,12 @@ class TestOfficialStandings(unittest.TestCase):
         self.assertTrue(official["updated_at"])
 
     def test_leagues_without_official_data(self):
-        predictor = LeaguePredictor("pt.1")
-        self.assertIsNone(predictor.official_standings())
+        # لیگ‌هایی که جدول رسمی‌شان هنوز وارد نشده (در حال تکمیل)
+        from football_predictor.dataset import load_official_standings
+
+        imported = set(load_official_standings())
+        missing = [lg for lg in ("en.1", "es.1", "de.1", "fr.1", "it.1", "nl.1", "pt.1") if lg not in imported]
+        self.assertEqual(missing, [], f"جدول رسمی این لیگ‌ها وارد نشده: {missing}")
 
 
 if __name__ == "__main__":
@@ -117,3 +121,32 @@ class DuplicateMappingTests(unittest.TestCase):
         )
         self.assertEqual(proc.returncode, 1, proc.stdout + proc.stderr)
         self.assertIn("monza", proc.stderr)
+
+
+class OfficialLeagueOutsideModelTests(unittest.TestCase):
+    def test_official_only_league_is_listed(self):
+        from football_predictor.dataset import load_official_standings, load_leagues, official_leagues
+
+        official = load_official_standings()
+        listed = {l["id"]: l for l in official_leagues()}
+        self.assertTrue(set(official).issubset(listed))
+        model = load_leagues()
+        for key, entry in listed.items():
+            self.assertEqual(entry["official_only"], key not in model)
+            self.assertTrue(entry["name_fa"])
+            self.assertEqual(entry["teams"], len(official[key]["rows"]))
+
+    def test_official_tables_are_internally_balanced(self):
+        from football_predictor.dataset import load_official_standings
+
+        for key, block in load_official_standings().items():
+            rows = block["rows"]
+            played = sum(r["played"] for r in rows)
+            self.assertEqual(played % 2, 0, f"{key}: مجموع بازی‌ها باید زوج باشد")
+            self.assertEqual(
+                sum(r["gf"] for r in rows), sum(r["ga"] for r in rows), f"{key}: گل زده و خورده"
+            )
+            self.assertEqual(
+                sum(r["won"] for r in rows), sum(r["lost"] for r in rows), f"{key}: برد و باخت"
+            )
+            self.assertEqual(sum(r["drawn"] for r in rows) % 2, 0, f"{key}: مساوی‌ها")

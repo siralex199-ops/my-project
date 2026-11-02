@@ -1,0 +1,228 @@
+{
+ "source": "varzesh3.com/leagues",
+ "note": "شناسه‌ی صفحه‌ی هر لیگ در ورزش۳؛ وضعیت وارد شدن جدول رسمی",
+ "leagues": [
+  {
+   "id": "ir.1",
+   "varzesh3": 6,
+   "title": "لیگ برتر ایران (خلیج فارس)",
+   "status": "imported"
+  },
+  {
+   "id": "en.1",
+   "varzesh3": 3,
+   "title": "لیگ برتر انگلیس",
+   "status": "imported"
+  },
+  {
+   "id": "es.1",
+   "varzesh3": 2,
+   "title": "لالیگا اسپانیا",
+   "status": "imported"
+  },
+  {
+   "id": "de.1",
+   "varzesh3": 1,
+   "title": "بوندسلیگا آلمان",
+   "status": "imported"
+  },
+  {
+   "id": "it.1",
+   "varzesh3": 4,
+   "title": "سری آ ایتالیا",
+   "status": "imported"
+  },
+  {
+   "id": "fr.1",
+   "varzesh3": 5,
+   "title": "لیگ یک فرانسه",
+   "status": "imported"
+  },
+  {
+   "id": "nl.1",
+   "varzesh3": 7,
+   "title": "اردیویسه هلند",
+   "status": "imported"
+  },
+  {
+   "id": "pt.1",
+   "varzesh3": 55,
+   "title": "لیگ برتر پرتغال",
+   "status": "imported"
+  },
+  {
+   "id": "en.2",
+   "varzesh3": 17,
+   "title": "چمپیونشیپ انگلیس",
+   "status": "pending"
+  },
+  {
+   "id": "it.2",
+   "varzesh3": 371,
+   "title": "سری بی ایتالیا",
+   "status": "pending"
+  },
+  {
+   "id": "en.3",
+   "varzesh3": 369,
+   "title": "لیگ یک انگلیس",
+   "status": "pending"
+  },
+  {
+   "id": "en.4",
+   "varzesh3": 370,
+   "title": "لیگ دو انگلیس",
+   "status": "pending"
+  },
+  {
+   "id": "de.2",
+   "varzesh3": 374,
+   "title": "بوندسلیگا ۲",
+   "status": "pending"
+  },
+  {
+   "id": "es.2",
+   "varzesh3": 372,
+   "title": "لالیگا ۲",
+   "status": "pending"
+  },
+  {
+   "id": "fr.2",
+   "varzesh3": 373,
+   "title": "لیگ دو فرانسه",
+   "status": "pending"
+  },
+  {
+   "id": "ir.2",
+   "varzesh3": 24,
+   "title": "لیگ آزادگان",
+   "status": "pending"
+  },
+  {
+   "id": "ru.1",
+   "varzesh3": 57,
+   "title": "لیگ برتر روسیه",
+   "status": "pending"
+  },
+  {
+   "id": "be.1",
+   "varzesh3": 56,
+   "title": "ژوپیر لیگ بلژیک",
+   "status": "pending"
+  },
+  {
+   "id": "tr.1",
+   "varzesh3": 35,
+   "title": "سوپرلیگ ترکیه",
+   "status": "pending"
+  },
+  {
+   "id": "br.1",
+   "varzesh3": 36,
+   "title": "سری آ برزیل",
+   "status": "pending"
+  },
+  {
+   "id": "sa.1",
+   "varzesh3": 326,
+   "title": "لیگ حرفه‌ای عربستان",
+   "status": "pending"
+  },
+  {
+   "id": "ae.1",
+   "varzesh3": 66,
+   "title": "لیگ برتر امارات",
+   "status": "pending"
+  },
+  {
+   "id": "qa.1",
+   "varzesh3": 37,
+   "title": "لیگ ستارگان قطر",
+   "status": "pending"
+  },
+  {
+   "id": "kr.1",
+   "varzesh3": 63,
+   "title": "کی‌لیگ کره جنوبی",
+   "status": "pending"
+  },
+  {
+   "id": "jp.1",
+   "varzesh3": 64,
+   "title": "جی‌لیگ ژاپن",
+   "status": "pending"
+  },
+  {
+   "id": "us.1",
+   "varzesh3": 335,
+   "title": "لیگ MLS آمریکا",
+   "status": "pending"
+  },
+  {
+   "id": "sco.1",
+   "varzesh3": 342,
+   "title": "پریمیرشیپ اسکاتلند",
+   "status": "pending"
+  },
+  {
+   "id": "ch.1",
+   "varzesh3": 343,
+   "title": "سوپرلیگ سوئیس",
+   "status": "pending"
+  },
+  {
+   "id": "gr.1",
+   "varzesh3": 344,
+   "title": "سوپرلیگ یونان",
+   "status": "pending"
+  },
+  {
+   "id": "at.1",
+   "varzesh3": 345,
+   "title": "بوندسلیگا اتریش",
+   "status": "pending"
+  },
+  {
+   "id": "hr.1",
+   "varzesh3": 346,
+   "title": "لیگ برتر کرواسی",
+   "status": "pending"
+  },
+  {
+   "id": "dk.1",
+   "varzesh3": 347,
+   "title": "سوپرلیگ دانمارک",
+   "status": "pending"
+  },
+  {
+   "id": "rs.1",
+   "varzesh3": 376,
+   "title": "سوپرلیگ صربستان",
+   "status": "pending"
+  },
+  {
+   "id": "cz.1",
+   "varzesh3": 377,
+   "title": "لیگ برتر جمهوری چک",
+   "status": "pending"
+  },
+  {
+   "id": "pl.1",
+   "varzesh3": 378,
+   "title": "لیگ برتر لهستان",
+   "status": "pending"
+  },
+  {
+   "id": "au.1",
+   "varzesh3": 381,
+   "title": "لیگ برتر استرالیا",
+   "status": "pending"
+  },
+  {
+   "id": "iq.1",
+   "varzesh3": 409,
+   "title": "لیگ ستارگان عراق",
+   "status": "pending"
+  }
+ ]
+}

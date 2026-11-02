@@ -23,6 +23,8 @@ sys.path.insert(0, str(ROOT))
 
 from football_predictor.dataset import (  # noqa: E402
     load_leagues,
+    load_official_standings,
+    official_leagues,
     load_matches,
     load_teams,
     resolve_team,
@@ -101,7 +103,11 @@ class Handler(BaseHTTPRequestHandler):
         limit = int(query.get("limit", ["30"])[0])
 
         if path == "/api/leagues":
-            return self._json({"leagues": REGISTRY.leagues(), "as_of": REGISTRY.as_of.isoformat()})
+            leagues = REGISTRY.leagues()
+            seen = {l["id"] for l in leagues}
+            # لیگ‌هایی که فقط جدول رسمی دارند (خارج از دیتاست مدل)
+            leagues += [l for l in official_leagues() if l["id"] not in seen]
+            return self._json({"leagues": leagues, "as_of": REGISTRY.as_of.isoformat()})
 
         if path == "/api/teams":
             predictor = REGISTRY.get(league)
@@ -144,6 +150,19 @@ class Handler(BaseHTTPRequestHandler):
             return self._json(payload)
 
         if path == "/api/table":
+            if league not in load_leagues():
+                block = (load_official_standings() or {}).get(league)
+                if not block:
+                    return self._error(f"لیگ ناشناخته: {league}", 404)
+                return self._json(
+                    {
+                        "league": league,
+                        "season": "",
+                        "default_source": "official",
+                        "official": block,
+                        "model": None,
+                    }
+                )
             predictor = REGISTRY.get(league)
             official = predictor.official_standings()
             return self._json(
