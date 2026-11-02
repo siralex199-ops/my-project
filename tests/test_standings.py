@@ -1,0 +1,87 @@
+"""تست ورود و خواندن جدول‌های رسمی (منبع: ورزش۳)."""
+
+from __future__ import annotations
+
+import importlib.util
+import sys
+import unittest
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+
+from football_predictor.dataset import load_official_standings, load_teams  # noqa: E402
+from football_predictor.predictor import LeaguePredictor  # noqa: E402
+
+spec = importlib.util.spec_from_file_location("import_standings", ROOT / "scripts" / "import_standings.py")
+import_standings = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(import_standings)
+
+SAMPLE = """
+| # |  | تیم | بازی | برد | مساوی | باخت | گل -/+ | تفاضل  | امتیاز | بازی‌های اخیر |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 |  | آرسنال | 9 | 8 | 0 | 1 | 14-5 | 9 | 24 | L W W W W |
+| 12 |  | نیوکسل | 8 | 3 | 2 | 3 | 12-14 | -2 | 11 | L W L L W |
+| 16 |  | کاونتری | 9 | 3 | 0 | 6 | 9-16 | -7 | 9 | W W L L W |
+"""
+
+
+class TestParser(unittest.TestCase):
+    def test_parse_goals_separately_from_numbers(self):
+        rows = import_standings.parse_rows(SAMPLE)
+        records = [import_standings.row_to_record(r) for r in rows]
+        records = [r for r in records if r]
+        self.assertEqual(len(records), 3)
+        arsenal = next(r for r in records if r["name"] == "آرسنال")
+        self.assertEqual(arsenal["played"], 9)
+        self.assertEqual(arsenal["won"], 8)
+        self.assertEqual((arsenal["gf"], arsenal["ga"]), (14, 5))
+        self.assertEqual(arsenal["points"], 24)
+
+    def test_row_with_inconsistent_totals_is_rejected(self):
+        broken = ["5", "", "تیم تست", "9", "5", "0", "1", "10-5", "5", "15", "W"]
+        self.assertIsNone(import_standings.row_to_record(broken))
+
+    def test_team_resolution_by_fa_name(self):
+        teams = load_teams()
+        self.assertEqual(import_standings.resolve("نیوکسل", "en.1", teams, {}), "newcastle")
+        self.assertEqual(import_standings.resolve("کاونتری", "en.1", teams, {}), "coventry city")
+        self.assertEqual(import_standings.resolve("آرسنال", "en.1", teams, {}), "arsenal")
+        self.assertEqual(import_standings.resolve("تیم ناشناخته", "en.1", teams, {}), None)
+
+    def test_manual_mapping(self):
+        teams = load_teams()
+        manual = {import_standings.norm("نیوکسل"): "arsenal"}
+        self.assertEqual(import_standings.resolve("نیوکسل", "en.1", teams, manual), "arsenal")
+
+
+class TestOfficialStandings(unittest.TestCase):
+    def test_loaded_tables_are_valid(self):
+        official = load_official_standings()
+        self.assertTrue(official, "دست‌کم یک جدول رسمی باید وارد شده باشد")
+        for league, data in official.items():
+            rows = data["rows"]
+            self.assertGreaterEqual(len(rows), 18, league)
+            points = [r["points"] for r in rows]
+            self.assertEqual(points, sorted(points, reverse=True), league)
+            for row in rows:
+                self.assertEqual(row["played"], row["won"] + row["drawn"] + row["lost"], league)
+                self.assertLessEqual(row["won"] * 3 + row["drawn"], row["points"] + 3)
+
+    def test_predictor_returns_official_rows(self):
+        predictor = LeaguePredictor("en.1")
+        official = predictor.official_standings()
+        if official is None:
+            self.skipTest("جدول رسمی برای en.1 وارد نشده")
+        self.assertEqual(len(official["rows"]), 20)
+        self.assertEqual(official["rows"][0]["position"], 1)
+        self.assertTrue(official["source"])
+        self.assertTrue(official["updated_at"])
+
+    def test_leagues_without_official_data(self):
+        predictor = LeaguePredictor("pt.1")
+        self.assertIsNone(predictor.official_standings())
+
+
+if __name__ == "__main__":
+    unittest.main(verbosity=2)

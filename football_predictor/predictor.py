@@ -11,6 +11,7 @@ from .dataset import (
     Match,
     load_leagues,
     load_matches,
+    load_official_standings,
     load_teams,
     matches_by_league,
     team_name,
@@ -176,6 +177,40 @@ class LeaguePredictor:
             row["position"] = i
             row["gd"] = row["gf"] - row["ga"]
         return table
+
+    # ----------------------------------------------------- official table
+    def official_standings(self) -> dict | None:
+        """جدول رسمی واردشده (مثلاً از ورزش۳) در صورت وجود."""
+        data = load_official_standings().get(self.league)
+        if not data or not data.get("rows"):
+            return None
+        rows = []
+        for row in data["rows"]:
+            team = row["team"]
+            gd = row.get("gd")
+            if gd is None and row.get("gf") is not None and row.get("ga") is not None:
+                gd = row["gf"] - row["ga"]
+            rows.append(
+                {
+                    "position": row.get("position"),
+                    "team": team,
+                    "name": team_name(team),
+                    "played": row["played"],
+                    "won": row["won"],
+                    "drawn": row["drawn"],
+                    "lost": row["lost"],
+                    "gf": row.get("gf"),
+                    "ga": row.get("ga"),
+                    "gd": gd,
+                    "points": row["points"],
+                }
+            )
+        return {
+            "source": data.get("source", ""),
+            "source_url": data.get("source_url", ""),
+            "updated_at": data.get("updated_at", ""),
+            "rows": rows,
+        }
 
     # -------------------------------------------------------------- power
     def power_table(self) -> list[dict]:

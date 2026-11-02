@@ -145,7 +145,16 @@ class Handler(BaseHTTPRequestHandler):
 
         if path == "/api/table":
             predictor = REGISTRY.get(league)
-            return self._json({"league": league, "season": predictor.season, "table": predictor.standings()})
+            official = predictor.official_standings()
+            return self._json(
+                {
+                    "league": league,
+                    "season": predictor.season,
+                    "default_source": "official" if official else "model",
+                    "official": official,
+                    "model": {"rows": predictor.standings()},
+                }
+            )
 
         if path == "/api/power":
             predictor = REGISTRY.get(league)

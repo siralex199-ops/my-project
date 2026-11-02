@@ -7,6 +7,8 @@ const state = {
   teams: [],
   meta: null,
   leaguePanel: "table",
+  tableSource: "official",
+  tableData: null,
   simCache: {},
 };
 
@@ -123,6 +125,13 @@ function bindEvents() {
     document.querySelectorAll("#leagueSwitch button").forEach((b) => b.classList.toggle("active", b === btn));
     document.getElementById("tablePanel").classList.toggle("hidden", state.leaguePanel !== "table");
     document.getElementById("powerPanel").classList.toggle("hidden", state.leaguePanel !== "power");
+  });
+  document.getElementById("tableSource").addEventListener("click", (e) => {
+    const btn = e.target.closest("button");
+    if (!btn) return;
+    state.tableSource = btn.dataset.src;
+    document.querySelectorAll("#tableSource button").forEach((b) => b.classList.toggle("active", b === btn));
+    renderTable();
   });
   document.getElementById("simRefresh").addEventListener("click", () => {
     state.simCache[state.league] = null;
@@ -384,15 +393,43 @@ async function loadLeague() {
       api("/api/table", { league: state.league }),
       api("/api/power", { league: state.league }),
     ]);
-    tableEl.innerHTML = tableHtml(table.table);
+    state.tableData = table;
+    state.tableSource = table.default_source || "model";
+    document.querySelectorAll("#tableSource button").forEach((b) =>
+      b.classList.toggle("active", b.dataset.src === state.tableSource)
+    );
+    document.querySelector('#tableSource button[data-src="official"]').style.display = table.official
+      ? ""
+      : "none";
+    renderTable();
     powerEl.innerHTML = powerHtml(power.power);
   } catch (err) {
     tableEl.innerHTML = errorBox(err.message);
   }
 }
 
+function renderTable() {
+  const tableEl = document.getElementById("leagueTable");
+  const badge = document.getElementById("tableSourceBadge");
+  const data = state.tableData;
+  if (!data) return;
+
+  const usingOfficial = state.tableSource === "official" && data.official;
+  const payload = usingOfficial ? data.official : data.model;
+
+  if (usingOfficial) {
+    badge.className = "source-badge live";
+    badge.innerHTML = `منبع: ورزش۳ · به‌روزرسانی ${formatDate(data.official.updated_at)}`;
+  } else {
+    badge.className = "source-badge";
+    badge.textContent = "محاسبه‌شده از نتایج موجود در دیتاست";
+  }
+
+  tableEl.innerHTML = tableHtml(payload.rows);
+}
+
 function tableHtml(rows) {
-  if (!rows.length) return `<p class="hint">جدولی موجود نیست.</p>`;
+  if (!rows || !rows.length) return `<p class="hint">جدولی موجود نیست.</p>`;
   const total = rows.length;
   const body = rows
     .map((r) => {
@@ -400,6 +437,8 @@ function tableHtml(rows) {
       if (r.position === 1) zone = '<span class="zone zone-champ"></span>';
       else if (r.position <= 4) zone = '<span class="zone zone-euro"></span>';
       else if (r.position > total - 3) zone = '<span class="zone zone-drop"></span>';
+      const goals = r.gf === null || r.gf === undefined ? "—" : `${fa(r.gf)}:${fa(r.ga)}`;
+      const gd = r.gd === null || r.gd === undefined ? "—" : `${r.gd > 0 ? "+" : ""}${fa(r.gd)}`;
       return `<tr>
         <td class="pos">${fa(r.position)}</td>
         <td class="team-cell">${zone}${escapeHtml(r.name)}</td>
@@ -407,8 +446,8 @@ function tableHtml(rows) {
         <td>${fa(r.won)}</td>
         <td>${fa(r.drawn)}</td>
         <td>${fa(r.lost)}</td>
-        <td>${fa(r.gf)}:${fa(r.ga)}</td>
-        <td>${r.gd > 0 ? "+" : ""}${fa(r.gd)}</td>
+        <td>${goals}</td>
+        <td>${gd}</td>
         <td class="pts">${fa(r.points)}</td>
       </tr>`;
     })

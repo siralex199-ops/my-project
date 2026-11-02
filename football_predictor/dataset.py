@@ -14,6 +14,9 @@ DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 # نتایج دستی که کاربر ثبت می‌کند؛ بعد از هر بازسازی دیتاست هم حفظ می‌شود
 MANUAL_RESULTS = DATA_DIR / "manual_results.csv"
 
+# جدول‌های رسمی واردشده (مثلاً از varzesh3) — جدا از جدول محاسبه‌شده از نتایج
+OFFICIAL_STANDINGS = DATA_DIR / "standings_official.json"
+
 
 @dataclass(frozen=True)
 class Match:
@@ -113,6 +116,18 @@ def load_teams() -> dict[str, dict]:
     if not path.exists():
         return {}
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+@lru_cache(maxsize=1)
+def load_official_standings() -> dict:
+    """جدول‌های رسمی واردشده: {league: {source, updated_at, rows}}."""
+    if not OFFICIAL_STANDINGS.exists():
+        return {}
+    try:
+        payload = json.loads(OFFICIAL_STANDINGS.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {}
+    return payload.get("leagues", {})
 
 
 @lru_cache(maxsize=1)
